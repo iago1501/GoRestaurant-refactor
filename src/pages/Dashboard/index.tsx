@@ -25,14 +25,9 @@ useEffect(() => {
   }     
 
   fetchData()
-  .catch(error => Error('Not possible to fetch data due =>', error))
+  .catch(error => Error(`Not possible to fetch data due => ${error}`))
 
 }, [])
-
-useEffect( () => {
-
-  console.log(foods)
-}, [foods])
 
   const handleAddFood = async (food: FoodAttributes) => {    
 
